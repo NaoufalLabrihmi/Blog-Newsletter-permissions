@@ -87,8 +87,7 @@
                     orderable: false,
                     searchable: false,
                     render: function(data, type, full, meta) {
-                        return '<button class="edit-btn btn btn-primary btn-sm" data-id="' + full.id + '">Edit</button>' +
-                            '<button class="delete-btn btn btn-danger btn-sm" data-id="' + full.id + '">Delete</button>' +
+                        return '<button class="delete-btn btn btn-danger btn-sm" data-id="' + full.id + '">Delete</button>' +
                             '<a href="subscribers/sendemail/' + full.id + '" class="btn btn-success btn-sm" data-id="' + full.id + '">Send Email</button>';
                     }
                 }
