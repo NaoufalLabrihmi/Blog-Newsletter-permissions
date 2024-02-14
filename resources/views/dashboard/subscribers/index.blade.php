@@ -11,22 +11,27 @@
 <div class="container-fluid">
     <div class="col-lg-12">
         <div class="card">
+            <div class="flex justify-center pt-10 mt-6">
+                <button class="bg-purple-300 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" onclick="pdf()">Exporter en PDF</button>
+            </div>
             <div class="card-header">
                 <i class="fa fa-align-justify"></i> {{ __('Subscribers') }}
             </div>
-            <div class="card-block">
-                <table class="table table-striped" id="table_id">
-                    <thead>
-                        <tr>
-                            <th>{{ __('ID') }}</th>
-                            <th>{{ __('Email') }}</th>
-                            <th>{{ __('Action') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Subscriber data will be filled dynamically here -->
-                    </tbody>
-                </table>
+            <div id="statc">
+                <div class="card-block">
+                    <table class="table table-striped" id="table_id">
+                        <thead>
+                            <tr>
+                                <th>{{ __('ID') }}</th>
+                                <th>{{ __('Email') }}</th>
+                                <th>{{ __('Action') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Subscriber data will be filled dynamically here -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -113,5 +118,11 @@
             });
         }
     });
+</script>
+<script>
+    function pdf() {
+        const element = document.getElementById('statc');
+        html2pdf(element);
+    }
 </script>
 @endpush
