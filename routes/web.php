@@ -12,6 +12,7 @@ use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PDFController;
 
 Route::get('/', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/about', function () {
@@ -19,6 +20,7 @@ Route::get('/about', function () {
 })->name('about.index');
 Route::get('/search', [SearchController::class, 'post'])->name('posts.search');
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified', 'has.role'])->name('dashboard');
+Route::get('/generate-dashboard-pdf', [DashboardController::class, 'generateDashboardPDF'])->name('generate.dashboard.pdf');
 Route::post('/subscriber', [SubscribeController::class, 'store'])->name('subscriber');
 Route::get('/tags', [TagController::class, 'index'])->name('tags.index');
 

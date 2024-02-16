@@ -27,8 +27,12 @@
                         $subscribeCount }}</a>
                 </x-ds_card_a>
                 @endcan
+                <x-ds_card_a>
+                    <a href="{{ route('generate.dashboard.pdf') }}" class="text-lg font-normal text-gray-900">Statistics PDF</a>
+                </x-ds_card_a>
 
             </div>
+
             <div class="mt-4">
                 <x-ds_card_a>
                     <h1>Google Analytic</h1>
