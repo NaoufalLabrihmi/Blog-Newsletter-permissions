@@ -1,0 +1,31 @@
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    font-size: larger;
+}
+
+p {
+    text-align: justify;
+}
+
+blockquote {
+    border-left: 9px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+}
+
+ul {
+    list-style-type: circle;
+    padding-left: 1rem;
+}
+
+ol {
+    list-style-type: lower-alpha;
+    padding-left: 1rem;
+}

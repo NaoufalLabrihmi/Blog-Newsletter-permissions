@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'visiarch'),
 
     /*
     |--------------------------------------------------------------------------
@@ -82,13 +82,7 @@ return [
     |
     */
 
-    'locale' => 'ar',
-    'languages' => [
-
-        'ar' => 'العربية',
-        'en' => 'English',
-        'fr' => 'Frensh',
-    ],
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -101,7 +95,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'ar',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -173,7 +167,8 @@ return [
         /*
          * Package Service Providers...
          */
-
+        JordanMiguel\LaravelPopular\LaravelPopularServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -182,7 +177,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 
@@ -199,7 +193,6 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
-        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ])->toArray(),
 
 ];
