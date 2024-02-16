@@ -20,7 +20,7 @@
 </ul>
 <h2 class="code-line" data-line-start=22 data-line-end=23 ><a id="Installation_22"></a>Installation</h2>
 <ul>
-<li class="has-line-data" data-line-start="24" data-line-end="25">git clone <a href="https://github.com/...">https://github.com/bagussuandana/Visiarch-Blog.git</a></li>
+<li class="has-line-data" data-line-start="24" data-line-end="25">git clone <a href="https://github.com/Youcode-Classe-E-2023-2024/Naoufal_Labrihmi_Newsletter.">https://github.com/Youcode-Classe-E-2023-2024/Naoufal_Labrihmi_Newsletter</a></li>
 <li class="has-line-data" data-line-start="25" data-line-end="26">Change folder name</li>
 <li class="has-line-data" data-line-start="26" data-line-end="27">Open in editor and run terminal</li>
 <li class="has-line-data" data-line-start="27" data-line-end="28">composer install</li>
