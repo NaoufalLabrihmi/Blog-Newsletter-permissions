@@ -1,7 +1,7 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Visiarch_standard_blog_0"></a>Visiarch standard blog</h1>
 <h2 class="code-line" data-line-start=1 data-line-end=2 ><a id="_build_with_Laravel_10__1"></a><em>build with Laravel 10</em></h2>
 <p class="has-line-data" data-line-start="3" data-line-end="4"><a href="https://travis-ci.org/joemccann/dillinger"><img src="https://travis-ci.org/joemccann/dillinger.svg?branch=master" alt="Build Status"></a></p>
-<p class="has-line-data" data-line-start="5" data-line-end="6">Visiarch blog is a standard blog application built using Laravel 10 framework, Tailwindcss, and Alpine Js. This application is equipped with Laravel Breeze, spatie/laravel-permission as standard authentication.</p>
+<p class="has-line-data" data-line-start="5" data-line-end="6">WORLD blog is a standard blog application built using Laravel 10 framework, Tailwindcss, and Alpine Js. This application is equipped with Laravel Breeze, spatie/laravel-permission as standard authentication.</p>
 <h2 class="code-line" data-line-start=7 data-line-end=8 ><a id="Features_7"></a>Features</h2>
 <ul>
 <li class="has-line-data" data-line-start="9" data-line-end="10">Email verification</li>
@@ -15,7 +15,7 @@
 <li class="has-line-data" data-line-start="17" data-line-end="18">sitemap</li>
 <li class="has-line-data" data-line-start="18" data-line-end="19">PWA for offline service</li>
 <li class="has-line-data" data-line-start="19" data-line-end="20">Testing Unit</li>
-<li class="has-line-data" data-line-start="20" data-line-end="22">it’s free, but if you like it you can treat me to a coffee.</li>
+<li class="has-line-data" data-line-start="20" data-line-end="22">Soft delete</li>
 </ul>
 <h2 class="code-line" data-line-start=22 data-line-end=23 ><a id="Installation_22"></a>Installation</h2>
 <ul>
