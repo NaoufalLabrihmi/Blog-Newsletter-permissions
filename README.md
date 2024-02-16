@@ -1,5 +1,5 @@
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Visiarch_standard_blog_0"></a>Visiarch standard blog</h1>
-<h2 class="code-line" data-line-start=1 data-line-end=2 ><a id="_build_with_Laravel_9__1"></a><em>build with Laravel 9</em></h2>
+<h2 class="code-line" data-line-start=1 data-line-end=2 ><a id="_build_with_Laravel_10__1"></a><em>build with Laravel 9</em></h2>
 <p class="has-line-data" data-line-start="3" data-line-end="4"><a href="https://travis-ci.org/joemccann/dillinger"><img src="https://travis-ci.org/joemccann/dillinger.svg?branch=master" alt="Build Status"></a></p>
 <p class="has-line-data" data-line-start="5" data-line-end="6">Visiarch blog is a standard blog application built using Laravel 10 framework, Tailwindcss, and Alpine Js. This application is equipped with Laravel Breeze, spatie/laravel-permission as standard authentication.</p>
 <h2 class="code-line" data-line-start=7 data-line-end=8 ><a id="Features_7"></a>Features</h2>
