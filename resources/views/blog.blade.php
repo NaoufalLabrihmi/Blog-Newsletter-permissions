@@ -5,17 +5,14 @@
     <section class="pb-6 border-b border-gray-300">
         <div>
             <div class="md:space-y5 pt-6 pb-8 space-y-2">
-                <h2
-                    class="dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-snug text-3xl font-extrabold leading-9 tracking-tight text-gray-900">
+                <h2 class="dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-snug text-3xl font-extrabold leading-9 tracking-tight text-gray-900">
                     {{ $title ?? 'All Post'}}
                 </h2>
             </div>
             <div class="md:flex-row flex flex-col">
                 <form action="{{route('posts.search')}}" method="get" class="flex flex-row">
                     <div class="relative max-w-lg">
-                        <input id="query" name="query" type="text" aria-label="Search post"
-                            placeholder="Search blog post"
-                            class="focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 dark:bg-black w-full px-4 rounded-md">
+                        <input id="query" name="query" type="text" aria-label="Search post" placeholder="Search blog post" class="focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 dark:bg-black w-full px-4 rounded-md">
                     </div>
                     <div class="flex ml-2">
                         <x-button_public>
@@ -89,10 +86,8 @@
                                 @endforeach
                             </div>
                             <div class="md:flex-row flex flex-col">
-                                <a href="{{route('post.show', $post->slug)}}"
-                                    class="md:w-1/4 md:pr-2 item-center flex w-full pr-0">
-                                    <img width="100%" height="100%" class="object-cover border rounded-md"
-                                        src="{{asset($post->thumbnail)}}" alt="{{$post->slug}}">
+                                <a href="{{route('post.show', $post->slug)}}" class="md:w-1/4 md:pr-2 item-center flex w-full pr-0">
+                                    <img width="100%" height="100%" class="object-cover border rounded-md" src="{{asset($post->thumbnail)}}" alt="{{$post->slug}}">
                                 </a>
                                 <div class="md:w-3/4 md:pl-2 w-full pl-0">
                                     <div class="max-w-none dark:text-gray-400 prose text-gray-800">
