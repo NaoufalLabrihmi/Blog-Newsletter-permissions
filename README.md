@@ -16,6 +16,7 @@
 <li class="has-line-data" data-line-start="18" data-line-end="19">PWA for offline service</li>
 <li class="has-line-data" data-line-start="19" data-line-end="20">Testing Unit</li>
 <li class="has-line-data" data-line-start="20" data-line-end="22">Soft delete</li>
+<li class="has-line-data" data-line-start="20" data-line-end="22">Send Newsletter</li>
 </ul>
 <h2 class="code-line" data-line-start=22 data-line-end=23 ><a id="Installation_22"></a>Installation</h2>
 <ul>
