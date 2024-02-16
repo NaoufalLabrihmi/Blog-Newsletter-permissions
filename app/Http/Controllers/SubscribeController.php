@@ -8,10 +8,21 @@ use App\Notifications\SendEmailNotification;
 use Illuminate\Http\Request;
 // use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Notification;
-
+use Illuminate\Mail\Markdown;
+use Illuminate\View\Engines\EngineResolver;
+use cebe\markdown\GithubMarkdown;
+use Illuminate\Contracts\View\Factory as ViewFactory;
 
 class SubscribeController extends Controller
 {
+    protected $markdown;
+    protected $viewFactory;
+
+    public function __construct(ViewFactory $viewFactory)
+    {
+        $this->viewFactory = $viewFactory;
+        $this->markdown = new Markdown($this->viewFactory); // Pass the ViewFactory instance
+    }
     // Web Method
     public function index()
     {
@@ -100,16 +111,17 @@ class SubscribeController extends Controller
         ]);
     }
     //send email to each subs
+
     public function storeSingleEmail(Request $request, $id)
     {
         $subscriber = Subscribe::find($id);
         $details = array();
         $details['greeting'] = $request->greeting;
-        $details['content'] = strip_tags($request->content);
+        $details['content'] = $this->markdown->parse($request->content); // Use $this->markdown to parse Markdown content
         $details['actiontext'] = $request->actiontext;
         $details['actionurl'] = $request->actionurl;
         $details['endtext'] = $request->endtext;
-        // dd($details['content']);
+
         Notification::send($subscriber, new SendEmailNotification($details));
 
         return redirect()->to('/admin/subscribers');
@@ -121,9 +133,8 @@ class SubscribeController extends Controller
         $subscribers = Subscribe::all();
 
         $details = array();
-
         $details['greeting'] = $request->greeting;
-        $details['content'] = strip_tags($request->content);
+        $details['content'] = $this->markdown->parse($request->content); // Use $this->markdown to parse Markdown content
         $details['actiontext'] = $request->actiontext;
         $details['actionurl'] = $request->actionurl;
         $details['endtext'] = $request->endtext;
