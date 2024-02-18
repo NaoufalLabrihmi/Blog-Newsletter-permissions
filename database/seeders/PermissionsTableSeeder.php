@@ -45,13 +45,18 @@ class PermissionsTableSeeder extends Seeder
             'update tag',
             'delete tag',
             'view user',
+            'email subscribe',
+            'email all subscribers'
         ]);
 
         $tags->each(function ($c) {
-            Permission::create([
-                'name' => $c,
-                'guard_name' => 'web',
-            ]);
+            // Check if the permission already exists
+            if (!Permission::where('name', $c)->exists()) {
+                Permission::create([
+                    'name' => $c,
+                    'guard_name' => 'web',
+                ]);
+            }
         });
     }
 }
