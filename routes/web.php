@@ -70,7 +70,7 @@ Route::prefix('admin')->middleware('auth', 'verified', 'has.role')->group(functi
         Route::delete('{subscribe}/delete', [SubscribeController::class, 'destroy'])->name('subscribe.delete')->middleware('permission:delete subscribe');
         Route::post('{subscribe}/sendemail', [SubscribeController::class, 'storeSingleEmail'])->name('subscribe.sendemail')->middleware('permission:email subscribe');
         // Route::post('/sendemailall', [SubscribeController::class, 'storeAllUserEmail'])->name('subscribe.sendemailall');
-        Route::post('/sendemailall', [SubscribeController::class, 'storeAllUserEmail'])->name('subscribe.sendemailall');
+        Route::post('/sendemailall', [SubscribeController::class, 'storeAllUserEmail'])->name('subscribe.sendemailall')->middleware('permission: email all subscribers');
     });
 
 
